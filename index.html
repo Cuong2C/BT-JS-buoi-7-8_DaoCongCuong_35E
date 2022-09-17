@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BT JS buổi 7-8</title>
+
+    <!-- BS4 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- Nhập các số vào mảng  -->
+    <div class="card">
+        <div class="card-header">
+           Nhập số nguyên muốn lưu vào mảng
+        </div>
+        <div class="card-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="">Nhập số nguyên</label>
+                            <input type="text" id="nhapSoNguyen" class="form-control">
+                            <small id="helpId" class="text-muted"></small>
+                        </div>
+    
+                        <div class="form-group">
+                            <br>
+                            <button class="btn btn-success" onclick="themVaoMang()" id="themVaoMang">Thêm số</button>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            Các phần tử mảng đã nhập: 
+            <div id="mangDaNhap" class="card-footer text-muted m-2">
+        
+            </div>
+        </div>
+    </div>
+  <!-- Tổng số dương trong mảng  -->
+  <div class="card">
+    <div class="card-header">
+       B1: Tổng số dương trong mảng
+    </div>
+    <div class="card-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <!-- <div class="form-group">
+                        <label for="">Nhập số nguyên</label>
+                        <input type="text" id="nhapSoNguyen" class="form-control">
+                        <small id="helpId" class="text-muted"></small>
+                    </div> -->
+
+                    <div class="form-group">
+                        <br>
+                        <button class="btn btn-success" onclick="tinhTongSO()" id="tinhTong">Tính tổng</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        Tổng các số dương đã nhập: 
+        <div id="tongSo" class="card-footer text-muted m-2">
+    
+        </div>
+    </div>
+</div>
+<!-- Tìm min  -->
+<div class="card">
+    <div class="card-header">
+       B2: Đếm số dương
+    </div>
+    <div class="card-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    
+
+                    <div class="form-group">
+                        <br>
+                        <button class="btn btn-success" onclick="demSoDuong()" id="">Đếm số dương</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        Số các số dương trong mảng: 
+        <div id="soDuong" class="card-footer text-muted m-2">
+    
+        </div>
+    </div>
+</div>
+ <!-- Tìm min  -->
+ <div class="card">
+    <div class="card-header">
+       B3: Tìm số nhỏ nhất
+    </div>
+    <div class="card-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    
+
+                    <div class="form-group">
+                        <br>
+                        <button class="btn btn-success" onclick="timMin()" id="">Tìm số nhỏ nhất</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        Số nguyên nhỏ nhất trong mảng là: 
+        <div id="soMin" class="card-footer text-muted m-2">
+    
+        </div>
+    </div>
+</div>
+
+<!-- Tìm số dương nhỏ nhất  -->
+<div class="card">
+    <div class="card-header">
+       B4: Tìm số dương nhỏ nhất
+    </div>
+    <div class="card-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    
+
+                    <div class="form-group">
+                        <br>
+                        <button class="btn btn-success" onclick="timMinDuong()" id="">Tìm số dương nhỏ nhất</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        Số nguyên dương nhỏ nhất trong mảng là: 
+        <div id="soMinDuong" class="card-footer text-muted m-2">
+    
+        </div>
+    </div>
+</div>
+
+<!-- Số chẵn cuối cùng -->
+<div class="card">
+    <div class="card-header">
+       B5: Tìm số chẵn cuối cùng, không có số chẵn trả về -1
+    </div>
+    <div class="card-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    
+
+                    <div class="form-group">
+                        <br>
+                        <button class="btn btn-success" onclick="soChanCuoi()" id="">Tìm số chẵn cuối cùng</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        Số chẵn cuối trong mảng là: 
+        <div id="chanCuoi" class="card-footer text-muted m-2">
+    
+        </div>
+    </div>
+</div>
+
+ <!-- Đổi chổ 2 giá trị  -->
+ <div class="card">
+    <div class="card-header">
+       B6: Đổi chổ 2 giá trị theo vị trí
+    </div>
+    <div class="card-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="">Nhập vị trí 1</label>
+                        <input type="text" id="nhapVT1" class="form-control">
+                        <small id="helpId" class="text-muted"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Nhập vị trí 2</label>
+                        <input type="text" id="nhapVT2" class="form-control">
+                        <small id="helpId" class="text-muted"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <br>
+                        <button class="btn btn-success" onclick="doiCho()" id="themVaoMang">Đổi chổ 2 giá trị theo vị trí</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        Mảng sau khi đổi: 
+        <div id="sauDoiCho" class="card-footer text-muted m-2">
+    
+        </div>
+    </div>
+</div>
+
+<!-- Sắp xếp mảng tăng dần -->
+<div class="card">
+    <div class="card-header">
+       B7: Xếp mảng tăng dần
+    </div>
+    <div class="card-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    
+
+                    <div class="form-group">
+                        <br>
+                        <button class="btn btn-success" onclick="sapXepTang()" id="">Sắp Xếp</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        Mảng sau khi sắp xếp: 
+        <div id="xepTangDan" class="card-footer text-muted m-2">
+    
+        </div>
+    </div>
+</div>
+
+<!-- Tìm số nguyên tố dầu tiên -->
+<div class="card">
+    <div class="card-header">
+       B8: Số nguyên tố dầu tiên trong mảng, không có trả về -1
+    </div>
+    <div class="card-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    
+
+                    <div class="form-group">
+                        <br>
+                        <button class="btn btn-success" onclick="timSNT()" id="">Tìm số nguyên tố</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        Số nguyên tố đầu tiên: 
+        <div id="SNT" class="card-footer text-muted m-2">
+    
+        </div>
+    </div>
+</div>
+
+ <!-- Nhập mảng số thực  -->
+ <div class="card">
+    <div class="card-header">
+       B9: Nhập số nguyên thực muốn lưu vào mảng
+    </div>
+    <div class="card-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="">Nhập số thực</label>
+                        <input type="text" id="nhapSoThuc" class="form-control">
+                        <small id="helpId" class="text-muted"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <br>
+                        <button class="btn btn-success" onclick="themSoThuc()" id="themVaoMang">Thêm số thực</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        Các phần tử mảng đã nhập: 
+        <div id="mangSoThuc" class="card-footer text-muted m-2">
+    
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                   
+
+                    <div class="form-group">
+                        <br>
+                        <button class="btn btn-success" onclick="demSoNguyen()" id="themVaoMang">Đếm số nguyên</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        Số các số nguyên trong mảng: 
+        <div id="cacSoNguyen" class="card-footer text-muted m-2">
+    
+        </div>
+    </div>
+
+</div>
+
+<!-- So sánh lượng số âm và dương -->
+<div class="card">
+    <div class="card-header">
+       B10: Lượng số âm và dương mảng nguyên
+    </div>
+    <div class="card-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    
+
+                    <div class="form-group">
+                        <br>
+                        <button class="btn btn-success" onclick="soSanh()" id="">So sánh</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        Số lượng số âm và dương: 
+        <div id="soSanhAmDuong" class="card-footer text-muted m-2">
+    
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+    <!-- BS4 -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+
+    <!-- JS -->
+    <script src="./main.js"></script>
+</body>
+
+</html>
